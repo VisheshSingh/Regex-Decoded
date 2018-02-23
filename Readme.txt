@@ -1,3 +1,5 @@
+DECODING REGEX
+
 Regular Expressions:
 - Always contained within / /
 - g stands for global and i stands for case insensitive
@@ -25,8 +27,11 @@ E.g: 'hello' or 'netninja' but not 'hi' or 'thegreedyworld'
 METACHARACTERS:
 
 \d : matches any character digit (same as [0-9])
+\D: not a digit
 \w : matches any word character(a-z, A-Z, 0-9, _)
+\W: not a word charater
 \s: matches whitespace character (space, tabs)
+\S: not a whitespace
 \t: match tab only 
 
 SPECIAL CHARACTERS:
@@ -43,6 +48,10 @@ STARTING AND ENDING PATTERNS:
  $ - must be at the end of the expression
  E.g: ^[a-z]{5}$ matches 'ninja' or 'abcde' but not 'aakjsdfasfjlkjskj'
  - match only happens if it is exactly 5 letter word
+ 
+ POSITION META CHARACTER:
+ \b : word boundary
+ e.g: \b\w{4}\b : matches all 4 letter words
 
 
 
