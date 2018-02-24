@@ -52,7 +52,23 @@ STARTING AND ENDING PATTERNS:
  POSITION META CHARACTER:
  \b : word boundary
  e.g: \b\w{4}\b : matches all 4 letter words
+ 
+ CAPTURING GROUPS:
+ - Can use $0, $1 and $2: $0-group 0 means everything, $1-group 1 means first parenthesis and $2-group 2 means second parenthesis.
+ - Typically used for find and replace
+ Find: (\w+),\s+(\w+) Replace with: $2 $1; 
+ 
+ GREEDY MODIFIER:
+ \[.*] - keep matching anything
+ \[.*?] - not greedy modifier
 
+ BACK REFERENCE:
+ \1
+ \b(\w+)\s\1\b: capture the repeated words
+ 
+ ALTERNATE CHARACTERS:
+ - Use | symbol
+ e.g: (cute | toy) rabbit : matches cute rabbit and toy rabbit
 
 
 
