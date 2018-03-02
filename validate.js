@@ -1,6 +1,6 @@
 // MAKING REGEX
 
-/* var regex = /[a-z]gi/;
+/* var regex = /[a-z]/gi;
 var regex2 = new RegExp(/[a-z]/, "ig"); */
 
 ////////////////////////////////////////////
@@ -9,16 +9,17 @@ const inputs = document.querySelectorAll('input');
 // REGEX FOR TELEPHONE
 
 const patterns = {
-    telephone: /^\d{10}$/
+    telephone: /^\d{10}$/,
+    username: /^[a-z\d]{5,12}$/i
 } 
 
 // VALIDATE FUNCTION
 function validate(field, regex){
     //console.log(regex.test(field.value));
     if(regex.test(field.value)){
-        field.className='valid;'
+        field.className='valid';
     } else {
-        field.className='invalid;'
+        field.className='invalid';
     }
 }
 
